@@ -25,7 +25,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from sentence_transformers import SentenceTransformer, util
 # --- Configure Gemini ---
-genai.configure(api_key="AIzaSyCkQ5UBlkbzE7uHqm0QfX0F0vWQ5wZg60w")
+genai.configure(api_key="Enter key")
 model = genai.GenerativeModel("gemini-1.5-flash")
 sem_model = SentenceTransformer('all-MiniLM-L6-v2')
 
@@ -417,8 +417,8 @@ def ask_gemini(df, prompts, output_txt_filename):
 
 # --- Send Email Report ---
 def send_email(to_email, csv_file, txt_file, image_files=None):
-    sender_email = "rathi.achintya@gmail.com"
-    sender_password = "kqta nkgm uolm asfp"  # Your Google app password here
+    sender_email = "email"
+    sender_password = "app password"  # Your Google app password here
 
     msg = MIMEMultipart()
     msg['From'] = sender_email
